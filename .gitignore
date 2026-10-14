@@ -1,0 +1,11 @@
+# Dados reais nunca são commitados (repo público).
+# Só os *.EXAMPLE.md são versionados.
+in/profile.md
+in/job.md
+in/base/*
+!in/base/.gitkeep
+out/*
+!out/.gitkeep
+__pycache__/
+*.pyc
+.DS_Store
