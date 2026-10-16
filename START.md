@@ -66,6 +66,23 @@ O script ajusta o font-size para caber em 1 página. Se estourar mesmo no mínim
 2. Score antes → depois, keywords adicionadas e onde (resumo/skills/bullets).
 3. Check de eliminatórios (um por linha: ok/risco).
 4. 1–2 perguntas de refinamento, se houver lacuna real (métrica, idioma, foco).
+5. Se cover letter pedida: paths do `md` + `pdf` da carta.
+
+## 8. Cover letter (quando pedida, após Etapa 2)
+
+Gerar só se a pessoa pedir ou se a vaga exigir. Mesmas fontes de fatos do currículo (`in/profile.md` + `in/base/`) e mesma regra: nada inventado.
+
+1. Idioma = idioma da vaga. 250–350 palavras, 3–4 parágrafos, sem bullets. Cabe em 1 página no mesmo script.
+2. Abertura: um gancho específico da vaga (frase do anúncio, produto, missão) + cargo exato. Nada de "To whom it may concern" ou "I want to express my interest".
+3. Meio: 2–3 provas concretas que respondem aos P1 da vaga, com as métricas reais do currículo. Recomendação só se constar em `in/profile.md` ou `in/base/` (nome + cargo + trecho curto), nunca inventada.
+4. Lacunas: não esconder nem fingir. Se relevante, mostrar o caminho real (ex.: "currently studying React").
+5. Fechamento: o que a pessoa quer resolver na empresa + disponibilidade (fuso, remoto). Assinatura com nome, email, LinkedIn e portfólio.
+6. Consistência: nenhum fato profissional (cargo, empresa, data, métrica, tecnologia, certificação, idioma, recomendação) fora do currículo enviado junto. Motivação e disponibilidade são a única exceção e não podem contradizer o currículo.
+7. Formato: começar com `# Nome` e uma linha de contato; depois parágrafos simples. Gerar `md` + `pdf` com o mesmo script:
+
+```bash
+python3 scripts/md_resume_to_pdf.py "out/<Empresa>_<Cargo>_CoverLetter_<PT|EN>.md" "out/<Empresa>_<Cargo>_CoverLetter_<PT|EN>.pdf"
+```
 
 ## Checklist final (antes de entregar)
 
@@ -78,7 +95,8 @@ O script ajusta o font-size para caber em 1 página. Se estourar mesmo no mínim
 - [ ] ATS-safe (coluna única, headers padrão, sem tabela/ícone/foto)?
 - [ ] `md` + `pdf` gerados em `out/` com naming correto?
 - [ ] Nada inventado?
+- [ ] Cover letter (se pedida): gancho específico, 2–3 provas com métrica real, nenhum fato profissional fora do currículo, `md` + `pdf`?
 
 ## Naming
 
-`out/<Empresa>_<Cargo>_<PT|EN>.md` + `.pdf`. Iterações: `_v2`, `_v3`. Vaga sem empresa clara: `out/<id>_<Cargo>_<PT|EN>.md`.
+`out/<Empresa>_<Cargo>_<PT|EN>.md` + `.pdf`. Iterações: `_v2`, `_v3` (vale também para CoverLetter). Cover letter: `out/<Empresa>_<Cargo>_CoverLetter_<PT|EN>.md` + `.pdf`. Vaga sem empresa clara: `out/<id>_<Cargo>_<PT|EN>.md`.
